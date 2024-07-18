@@ -6,10 +6,9 @@ import MovieCard from "./MovieCard";
 import './App.css';
 import SearchIcon from './search.svg';
 
-// 4dd3c08d
 // 'YOUR KEY'
 
-const API_URL = 'http://www.omdbapi.com?apikey=YOURKEY'
+const API_URL = 'http://www.omdbapi.com?apikey=YOUR KEY'
 
 const movie1 = {
     "Title": "Spiderman",
@@ -37,11 +36,16 @@ const App = () => {
 
     }, [])
 
+    const handleOnSubmit = (e) => {
+        e.preventDefault();
+        searchMovies(searchTerm);
+    }
+
     return(
         <div className="app">
             <h1>CineSpot</h1>
 
-            <div className="search">
+            <form onSubmit={handleOnSubmit} className="search">
                 <input
                     placeholder="Search for movies"
                     value={searchTerm}
@@ -52,7 +56,7 @@ const App = () => {
                     alt="search"
                     onClick={() => searchMovies(searchTerm)}
                 />
-            </div>
+            </form>
              
 
             {movies?.length > 0
