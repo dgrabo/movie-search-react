@@ -15,7 +15,7 @@ Simple and user-friendly web application built with React and OMDb API.
 
 1. **Clone the Repository**:
 
-    `git clone https://github.com/dgrabo/movie-search-react` 
+    `git clone https://github.com/dgrabo/movie-search-react.git` 
 
 2. **Install Dependencies**:
 
